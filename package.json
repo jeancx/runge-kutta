@@ -1,0 +1,14 @@
+{
+  "name": "runge-kutta",
+  "description": "Calculo Numérico: Runge Kutta",
+  "version": "1.0.0",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
