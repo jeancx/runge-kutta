@@ -10,4 +10,3 @@ Trabalho desenvolvido para a matéria de Calculo Numérico
 **Alunos:** Jean Carlos F., Michael D. e José Vitor
 
 **Online demo:** https://runge-kutta-univali.herokuapp.com/
-# runge-kutta
