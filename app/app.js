@@ -81,10 +81,10 @@ class App extends React.Component {
                       <th/>
                       <th>X</th>
                       <th>Y</th>
-                      <th>K1</th>
+                      {/* <th>K1</th>
                       <th>K2</th>
                       <th>K3</th>
-                      <th>K4</th>
+                      <th>K4</th> */}
                       <th>Erro</th>
                     </tr>
                   </thead>
@@ -95,16 +95,16 @@ class App extends React.Component {
                           <td><span>{index}</span></td>
                           <td><span>{row.x}</span></td>
                           <td><span>{row.y}</span></td>
-                          <td><span>{row.k1}</span></td>
+                          {/* <td><span>{row.k1}</span></td>
                           <td><span>{row.k2}</span></td>
                           <td><span>{row.k3}</span></td>
-                          <td><span>{row.k4}</span></td>
+                          <td><span>{row.k4}</span></td> */}
                           <td><span>{row.error}</span></td>
                         </tr>
                       ))
                       : (
                         <tr>
-                          <td colSpan={8}><span>Nenhum resultado.</span></td>
+                          <td colSpan={4}><span>Nenhum resultado.</span></td>
                         </tr>
                       )
                     }
