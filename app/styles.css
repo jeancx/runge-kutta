@@ -33,15 +33,23 @@ input {
     background-color: #f1f1f1 !important
 }
 
-.table {
+table.result {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     width: 601px;
 }
 
-th, td {
+table.result th, table.result td {
     text-align: center;
     font-weight: 600;
-    padding: 10px !important;
+    padding: 20px !important;
+}
+
+table.legend td:first-child {
+    font-weight: bold;
+}
+
+table.legend td {
+    font-size: 150%;
 }
