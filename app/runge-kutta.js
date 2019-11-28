@@ -1,4 +1,4 @@
-function rk4 (y, x, dx, fn) {
+function rk4 (x, y, dx, fn) {
   const k1 = dx * eval_fn(x, y, fn)
   const k2 = dx * eval_fn(x + dx / 2.0, +y + k1 / 2.0, fn)
   const k3 = dx * eval_fn(x + dx / 2.0, +y + k2 / 2.0, fn)
@@ -17,7 +17,7 @@ function error (x, y) {
 
 class RungeKutta {
   static solve (x = 0.0, y = 1.0, fn, dx) {
-    let step = 0.1, steps = 0
+    let steps = 0
     const maxSteps = 101, sampleEveryN = 10
     let result = []
 
@@ -26,7 +26,7 @@ class RungeKutta {
         result.push({ x, y, error: error(x, y) })
       }
 
-      y = rk4(y, x, step, fn)
+      y = rk4(x, y, dx, fn)
       x = ((x * 10) + (step * 10)) / 10
       steps += 1
     }
