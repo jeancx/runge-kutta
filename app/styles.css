@@ -43,7 +43,7 @@ table.result {
 table.result th, table.result td {
     text-align: center;
     font-weight: 600;
-    padding: 20px !important;
+    padding: 10px !important;
 }
 
 table.legend td:first-child {
