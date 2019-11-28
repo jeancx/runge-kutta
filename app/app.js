@@ -59,7 +59,7 @@ class App extends React.Component {
                 </div>
               </div>
               <div className='col-md-2'>
-                <button onClick={this.solve} className='btn btn-block btn-primary'>Resolver</button>
+                <button onClick={this.solve} className='btn btn-block btn-primary' type='button'>Resolver</button>
               </div>
             </div>
 
