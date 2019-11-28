@@ -12,12 +12,19 @@ class App extends React.Component {
   handleChange (e) {
     const { name, value } = e.target
     const newState = {}
-    newState[name] = parseFloat(value)
+    newState[name] = value
     this.setState(newState)
   }
 
   solve () {
-    this.setState({ result: RungeKutta.solve(this.state.x, this.state.y, this.state.dx, this.state.fn) })
+    this.setState({
+      result: RungeKutta.solve(
+        parseFloat(this.state.x),
+        parseFloat(this.state.y),
+        parseFloat(this.state.dx),
+        this.state.fn
+      )
+    })
   }
 
   render () {
