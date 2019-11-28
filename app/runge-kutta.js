@@ -16,18 +16,16 @@ function error (x, y) {
 }
 
 class RungeKutta {
-  static solve (x = 0.0, y = 1.0, fn, dx) {
+  static solve (x = 0.0, y = 1.0, dx = 0.1, fn) {
     let steps = 0
-    const maxSteps = 101, sampleEveryN = 10
+    const maxSteps = 101
     let result = []
 
     while (steps < maxSteps) {
-      if (steps % sampleEveryN === 0) {
-        result.push({ x, y, error: error(x, y) })
-      }
+      result.push({ x, y, error: error(x, y) })
 
       y = rk4(x, y, dx, fn)
-      x = ((x * 10) + (step * 10)) / 10
+      x = ((x * 10) + (dx * 10)) / 10
       steps += 1
     }
 
